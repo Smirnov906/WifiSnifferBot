@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="javascripts/jquery-3.3.1.min.js"></script>
+	<script type='text/javascript' src='javascripts/knockout-3.4.2.js'></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<title>MacTest</title>
+</head>
+<body>
+	<p>Ваш IP: <%= ip%></p>
+	<p>Ваш MAC: <%= mac%></p>
+	<!--ko if: !res() -->
+		<input id = "input" type="text" placeholder = "Фамилия Имя"name="name" data-bind="value:name">
+		<button type="button" data-bind="click:sendName">Отправить</button>
+	<!--/ko-->
+	<!--ko if: res() -->
+	<a href="/">Table</a>
+	<!--/ko-->
+
+	<p data-bind="text:res"></p>
+</body>
+<script type="text/javascript" src="javascripts/testVM.js"></script>
+	<script src="javascripts/jquery-3.3.1.min.js"></script>
+</html>

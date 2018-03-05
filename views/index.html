@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Table view</title>
+    <script src="javascripts/jquery-3.3.1.min.js"></script>
+    <script type='text/javascript' src='javascripts/knockout-3.4.2.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Имя</th>
+                <th>MacAddress</th>
+                <th>На работе</th>
+                <th>Дата прихода</th>
+                <th>Время прихода</th>
+                <th>Последний контакт</th>
+                <th>Время ухода</th>
+                </th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach:getUsersData">
+            <tr data-bind="style: { backgroundColor: status.onWork ? 'rgb(189, 239, 201)':'rgb(241, 174, 181)' }">
+                <td data-bind="text: name"></td>
+                <td data-bind="text: macAddress"></td>
+                <td data-bind="text: status.onWork ? 'Да':'Нет'"></td>
+                <td data-bind="text: status.date"> </td>
+                <td data-bind="text: status.timeFirstSeen"></td>
+                <td data-bind="text: status.lastContact"></td>
+                <td data-bind="text: status.leftTime"></td>
+            </tr>
+        </tbody>
+    </table>
+    <hr/>
+    <!-- <table class="table table-bordered table-hover">
+            <thead>
+                    <tr>
+                        <th>MacAddress</th>
+                        <th>Date</th>
+                        
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach:getUnknownData">
+                        <tr>
+                            <td data-bind="text: macAddress" bgcolor="#BDBDBD"></td>
+                            <td data-bind="text: date" bgcolor="#BDBDBD"></td>
+                            
+                        </tr>
+                    </tbody>
+    </table> -->
+</body>
+<script src="javascripts/indexVM.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>

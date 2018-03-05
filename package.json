@@ -1,0 +1,27 @@
+{
+  "name": "wifisnifferbot",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "agenda": "^1.0.3",
+    "agendash": "^0.4.0",
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "ejs": "^2.5.7",
+    "express": "~4.14.1",
+    "express-device": "^0.4.2",
+    "jade": "~1.11.0",
+    "lodash": "^4.17.5",
+    "moment": "^2.20.1",
+    "mongoose": "^5.0.3",
+    "morgan": "~1.7.0",
+    "node-arp": "^1.0.6",
+    "pcap-parser": "^0.2.1",
+    "serve-favicon": "~2.3.2",
+    "telegraf": "^3.17.7"
+  }
+}

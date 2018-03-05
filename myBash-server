@@ -1,0 +1,5 @@
+#!/bin/bash
+while sleep 1;
+do
+scp root@10.66.81.2:/tmp/out.cap /htdocs/wifisnifferbot/workers && ssh root@10.66.81.2 rm -rf /tmp/out.cap
+done

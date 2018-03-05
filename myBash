@@ -1,5 +1,6 @@
-#!/bin/bash
+count=0;
 while sleep 1;
-do
-scp root@10.66.81.2:/tmp/out.cap /htdocs/wifisnifferbot/workers && ssh root@10.66.81.2 rm -rf /tmp/out.cap
-done
+do sudo tcpdump -i any -e -n -s 1514 -c 500 -w /tmp/out/pcap.cap -v
+cp /tmp/out/pcap.cap /tmp/out/outFolder/out$count.cap
+count=`expr $count + 1`
+done;
